@@ -1,21 +1,45 @@
 aid: azura
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/azura.png
 name: Azura
-description: 'Azura is a company surfaced as a portfolio company of initialized-capital and added to the
-  API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: 'Azura is an onchain trading platform that lets users trade any onchain asset priced in USD
+  without managing wallets, bridging assets, or paying gas fees. Under the tagline "If it''s onchain,
+  it''s on Azura," the app offers cross-chain token swaps across multiple blockchains in a single
+  transaction, spot trading with multiple order types, token discovery and analysis, portfolio and PnL
+  tracking, a referral system, and an Azurite rewards program, all with zero platform trading fees.
+  Smart-contract interactions are algorithmically security-audited. Azura is a consumer-facing DeFi
+  product (web app at app.azura.xyz) backed by Initialized Capital; it publishes user documentation and
+  a blog but does not currently expose a public developer API, SDK, or specification surface.'
 url: https://raw.githubusercontent.com/api-evangelist/azura/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - initialized-capital
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profile
+x-tier-reason: portfolio-lead-enriched
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-- Unknown
+- DeFi
+- Crypto
+- Blockchain
+- Trading
+- Onchain
+- Token Swap
+- Cross-Chain
+- Fintech
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +49,34 @@ maintainers:
 common:
 - type: Website
   url: https://azura.xyz/
+- type: Documentation
+  url: https://docs.azura.xyz/
+- type: HelpCenter
+  url: https://docs.azura.xyz/
+- type: Support
+  url: https://docs.azura.xyz/
+- type: Blog
+  url: https://azura.xyz/blogs
+- type: TermsOfService
+  url: https://azura.xyz/tos
+- type: PrivacyPolicy
+  url: https://azura.xyz/privacy
+- type: SignUp
+  url: https://app.azura.xyz/
+- type: Login
+  url: https://app.azura.xyz/
+- type: Twitter
+  url: https://x.com/azuratrade
+- type: Discord
+  url: https://discord.com/invite/azuratrade
+- type: Telegram
+  url: https://t.me/azuratrade
+- type: WellKnown
+  url: well-known/azura-well-known.yml
+- type: DomainSecurity
+  url: security/azura-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

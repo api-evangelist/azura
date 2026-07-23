@@ -1,0 +1,58 @@
+generated: '2026-07-18'
+method: searched
+source: live probe of /.well-known/* on Azura hosts
+hosts_probed:
+- https://azura.xyz
+- https://app.azura.xyz
+- https://docs.azura.xyz
+documents:
+- host: https://azura.xyz
+  path: /.well-known/security.txt
+  status: 404
+- host: https://azura.xyz
+  path: /.well-known/openid-configuration
+  status: 404
+- host: https://azura.xyz
+  path: /.well-known/oauth-authorization-server
+  status: 404
+- host: https://azura.xyz
+  path: /.well-known/api-catalog
+  status: 404
+- host: https://azura.xyz
+  path: /.well-known/ai-plugin.json
+  status: 404
+- host: https://app.azura.xyz
+  path: /.well-known/security.txt
+  status: 404
+- host: https://app.azura.xyz
+  path: /.well-known/openid-configuration
+  status: 404
+- host: https://app.azura.xyz
+  path: /.well-known/oauth-authorization-server
+  status: 404
+- host: https://app.azura.xyz
+  path: /.well-known/api-catalog
+  status: 404
+- host: https://app.azura.xyz
+  path: /.well-known/ai-plugin.json
+  status: 404
+- host: https://docs.azura.xyz
+  path: /.well-known/security.txt
+  status: 200
+  file: azura-docs-security.txt
+  note: 'Not Azura''s own security.txt. docs.azura.xyz is served by the Intercom help-center
+    platform and returns Intercom''s generic vendor security.txt (Canonical:
+    app.intercom.com). Recorded verbatim but NOT attributed to Azura; no Azura
+    security program is claimed from it.'
+- host: https://docs.azura.xyz
+  path: /.well-known/openid-configuration
+  status: 404
+- host: https://docs.azura.xyz
+  path: /.well-known/oauth-authorization-server
+  status: 404
+- host: https://docs.azura.xyz
+  path: /.well-known/api-catalog
+  status: 404
+- host: https://docs.azura.xyz
+  path: /.well-known/ai-plugin.json
+  status: 404
