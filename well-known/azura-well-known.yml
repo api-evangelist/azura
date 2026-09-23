@@ -5,54 +5,45 @@ hosts_probed:
 - https://azura.xyz
 - https://app.azura.xyz
 - https://docs.azura.xyz
-documents:
-- host: https://azura.xyz
-  path: /.well-known/security.txt
-  status: 404
-- host: https://azura.xyz
-  path: /.well-known/openid-configuration
-  status: 404
-- host: https://azura.xyz
-  path: /.well-known/oauth-authorization-server
-  status: 404
-- host: https://azura.xyz
-  path: /.well-known/api-catalog
-  status: 404
-- host: https://azura.xyz
-  path: /.well-known/ai-plugin.json
-  status: 404
-- host: https://app.azura.xyz
-  path: /.well-known/security.txt
-  status: 404
-- host: https://app.azura.xyz
-  path: /.well-known/openid-configuration
-  status: 404
-- host: https://app.azura.xyz
-  path: /.well-known/oauth-authorization-server
-  status: 404
-- host: https://app.azura.xyz
-  path: /.well-known/api-catalog
-  status: 404
-- host: https://app.azura.xyz
-  path: /.well-known/ai-plugin.json
-  status: 404
-- host: https://docs.azura.xyz
-  path: /.well-known/security.txt
-  status: 200
-  file: azura-docs-security.txt
-  note: 'Not Azura''s own security.txt. docs.azura.xyz is served by the Intercom help-center
-    platform and returns Intercom''s generic vendor security.txt (Canonical:
-    app.intercom.com). Recorded verbatim but NOT attributed to Azura; no Azura
-    security program is claimed from it.'
-- host: https://docs.azura.xyz
-  path: /.well-known/openid-configuration
-  status: 404
-- host: https://docs.azura.xyz
-  path: /.well-known/oauth-authorization-server
-  status: 404
-- host: https://docs.azura.xyz
-  path: /.well-known/api-catalog
-  status: 404
-- host: https://docs.azura.xyz
-  path: /.well-known/ai-plugin.json
-  status: 404
+hosts:
+- host: ''
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/security.txt
+    status: 200
+    file: azura-docs-security.txt
+    note: 'Not Azura''s own security.txt. docs.azura.xyz is served by the Intercom help-center platform
+      and returns Intercom''s generic vendor security.txt (Canonical: app.intercom.com). Recorded verbatim
+      but NOT attributed to Azura; no Azura security program is claimed from it.'
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
